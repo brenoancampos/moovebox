@@ -244,7 +244,7 @@ body.intro-lock { overflow: hidden; }
 /* Realce de cor/contraste, enquadramento uniforme, cantos arredondados e zoom suave */
 .photo-frame { position: relative; overflow: hidden; border-radius: 14px; }
 .product-photo {
-  width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block;
+  width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: center 60%; display: block;
   filter: contrast(1.06) saturate(1.14) brightness(1.03);
   transition: transform 0.7s var(--ease);
 }
