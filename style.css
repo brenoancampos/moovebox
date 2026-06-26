@@ -110,50 +110,48 @@ body.intro-lock { overflow: hidden; }
 }
 .intro-content {
   position: relative; z-index: 2;
-  display: flex; flex-direction: column; align-items: center; gap: 1.8rem;
+  display: flex; flex-direction: column; align-items: center; gap: 1.1rem;
   padding: 0 22px; text-align: center;
 }
 .intro-stage { position: relative; display: grid; place-items: center; }
+/* Logo pulsando (apenas escala, sem brilho colorido — fundo só preto) */
 .intro-logo {
   position: relative; z-index: 2;
   width: clamp(240px, 42vw, 480px); height: auto; display: block;
-  filter: drop-shadow(0 0 26px rgba(255,255,255,0.12));
-  animation: introPop 1.3s var(--ease) both;
+  animation: introFade 0.6s ease both, logoPulse 2.4s ease-in-out infinite;
 }
-.intro-sheen { position: absolute; z-index: 3; inset: 0; overflow: hidden; pointer-events: none; }
-.intro-sheen::before {
-  content: ""; position: absolute; top: -20%; left: -60%; width: 38%; height: 140%;
-  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.35), transparent);
-  transform: skewX(-18deg); animation: introSheen 3.4s ease-in-out 0.9s infinite;
-}
+/* Frase com efeito de digitação (cursor piscando) */
 .intro-tag {
-  max-width: 540px; color: var(--cinza-2); font-size: clamp(0.95rem, 2vw, 1.15rem); line-height: 1.7;
-  opacity: 0; transform: translateY(12px); animation: introUp 1s var(--ease) 0.5s forwards;
+  max-width: 640px; margin-top: -0.6rem; min-height: 1.5em;
+  font-family: "Sora", sans-serif; font-weight: 600; line-height: 1.45;
+  font-size: clamp(1.15rem, 3vw, 1.7rem); letter-spacing: 0.005em; color: #fff;
+  border-right: 2px solid rgba(255,255,255,0.85); padding-right: 4px;
+  animation: caretBlink 0.9s step-end infinite;
 }
+/* Botão Entrar — vermelho */
 .intro-enter {
   position: relative; display: inline-flex; align-items: center; gap: 0.7rem;
-  margin-top: 0.4rem; padding: 0.95rem 2.4rem; border-radius: 999px;
-  background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.28);
-  font-family: "Sora", sans-serif; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.04em;
-  cursor: pointer; backdrop-filter: blur(8px);
+  margin-top: 0.4rem; padding: 0.95rem 2.6rem; border-radius: 999px; border: 0;
+  background: linear-gradient(100deg, var(--dourado-2), var(--dourado)); color: #fff;
+  font-family: "Sora", sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.04em;
+  cursor: pointer; box-shadow: 0 10px 30px -8px rgba(229,9,20,0.55);
   opacity: 0; transform: translateY(12px); animation: introUp 1s var(--ease) 0.9s forwards;
-  transition: transform 0.35s var(--ease), background 0.35s, border-color 0.35s, box-shadow 0.35s;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s, filter 0.35s;
 }
-.intro-enter:hover { transform: translateY(-3px); background: rgba(255,255,255,0.12); border-color: #fff; box-shadow: 0 14px 44px -12px rgba(255,255,255,0.35); }
+.intro-enter:hover { transform: translateY(-3px); box-shadow: 0 16px 46px -10px rgba(229,9,20,0.85); filter: brightness(1.08); }
 .intro-enter svg { transition: transform 0.35s var(--ease); }
 .intro-enter:hover svg { transform: translateX(5px); }
 .intro-enter::after {
-  content: ""; position: absolute; inset: -1px; border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.45); animation: introBtnPulse 2.6s ease-out infinite;
+  content: ""; position: absolute; inset: -2px; border-radius: 999px;
+  border: 2px solid rgba(229,9,20,0.55); animation: introBtnPulse 2.4s ease-out infinite;
 }
-@keyframes introPop {
-  0% { opacity: 0; transform: scale(0.78); filter: blur(10px); }
-  60% { opacity: 1; filter: blur(0); }
-  100% { opacity: 1; transform: scale(1); }
+@keyframes introFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
 }
-@keyframes introSheen { 0% { left: -60%; } 55%,100% { left: 130%; } }
+@keyframes caretBlink { 0%, 100% { border-color: rgba(255,255,255,0.85); } 50% { border-color: transparent; } }
 @keyframes introUp { to { opacity: 1; transform: translateY(0); } }
-@keyframes introGrid { to { background-position: 48px 48px, 48px 48px; } }
 @keyframes introSpot { 0% { transform: translate(-62%, -56%); } 100% { transform: translate(-38%, -44%); } }
 @keyframes introBtnPulse { 0% { opacity: 0.6; transform: scale(1); } 100% { opacity: 0; transform: scale(1.22); } }
 @media (prefers-reduced-motion: reduce) {
@@ -241,6 +239,37 @@ body.intro-lock { overflow: hidden; }
 .product-img, .car-slide, .video-embed { position: relative; background: linear-gradient(135deg, #161616, #0a0a0a); border: 1px dashed rgba(255,255,255,0.14); border-radius: 14px; display: grid; place-items: center; }
 .product-img { aspect-ratio: 16/10; }
 .product-img::after, .car-slide::after, .video-embed::after { content: attr(data-label); color: var(--cinza); font-size: 0.85rem; letter-spacing: 0.03em; }
+
+/* ===================== IMAGENS (tratamento profissional/comercial) ===================== */
+/* Realce de cor/contraste, enquadramento uniforme, cantos arredondados e zoom suave */
+.photo-frame { position: relative; overflow: hidden; border-radius: 14px; }
+.product-photo {
+  width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block;
+  filter: contrast(1.06) saturate(1.14) brightness(1.03);
+  transition: transform 0.7s var(--ease);
+}
+.product-card:hover .product-photo { transform: scale(1.06); }
+
+/* Foto de destaque do hero */
+.hero-photo {
+  position: relative; width: 100%; max-width: 520px; border-radius: 18px; overflow: hidden;
+  box-shadow: 0 40px 90px -30px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.06);
+  animation: float 9s var(--ease) infinite alternate;
+}
+.hero-photo img {
+  width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover;
+  filter: contrast(1.06) saturate(1.12) brightness(1.04);
+}
+.hero-photo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.35));
+}
+
+/* Fotos do carrossel */
+.car-photo {
+  flex: 0 0 100%; width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;
+  filter: contrast(1.05) saturate(1.1);
+}
 
 .product-body { padding: 22px 24px 26px; }
 .product-body h3 { font-size: 1.5rem; margin-bottom: 0.6rem; }
@@ -376,7 +405,9 @@ body.intro-lock { overflow: hidden; }
 .footer-bottom { border-top: 1px solid var(--line); text-align: center; padding: 1.4rem; color: var(--cinza); font-size: 0.85rem; }
 
 /* WhatsApp flutuante */
-.whats-float { position: fixed; bottom: 24px; right: 24px; z-index: 90; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; font-size: 1.6rem; background: linear-gradient(135deg, #25d366, #128c4b); box-shadow: 0 12px 30px -8px rgba(37,211,102,0.6); animation: pulse 2.4s infinite; }
+.whats-float { position: fixed; bottom: 24px; right: 24px; z-index: 90; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, #25d366, #128c4b); box-shadow: 0 12px 30px -8px rgba(37,211,102,0.6); animation: pulse 2.4s infinite; transition: transform 0.3s var(--ease); }
+.whats-float:hover { transform: scale(1.08); }
+.whats-float svg { width: 32px; height: 32px; display: block; }
 @keyframes pulse { 0%,100% { box-shadow: 0 12px 30px -8px rgba(37,211,102,0.6); } 50% { box-shadow: 0 12px 40px -4px rgba(37,211,102,0.9); } }
 
 /* ===================== SCROLL REVEAL ===================== */
