@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Equipamentos premium para eventos. Transforme um único investimento em uma renda recorrente locando equipamentos de alta qualidade para festas e eventos." />
+  <title>Moove Box — Equipamentos premium para você faturar em eventos</title>
+
+  <!-- Tipografia moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== INTRO / ABERTURA ===================== -->
+  <div class="intro" id="intro">
+    <div class="intro-bg"></div>
+    <div class="intro-content">
+      <div class="intro-stage">
+        <img src="logo.png" alt="Moove Box" class="intro-logo" />
+        <span class="intro-sheen"></span>
+      </div>
+      <p class="intro-tag">Equipamentos de alto padrão: acabamento premium, estrutura em alumínio e máxima durabilidade. Qualidade que se vê e se sente.</p>
+      <button class="intro-enter" id="introEnter" type="button">
+        <span>Entrar</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="nav" id="topo">
+    <div class="container nav-inner">
+      <!-- LOGO: PNG com fundo transparente (gerado a partir da logo.jpeg) -->
+      <a href="#topo" class="logo brand">
+        <img src="logo.png" alt="Moove Box" class="logo-img" />
+      </a>
+
+      <nav class="menu" id="menu">
+        <a href="#produtos">Produtos</a>
+        <a href="#qualidade">Qualidade</a>
+        <a href="#calculadora">Calcular Lucro</a>
+        <a href="#porque">Por que investir</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20dos%20equipamentos%20da%20Moove%20Box." target="_blank" rel="noopener" class="btn btn-gold nav-cta">Solicitar Orçamento</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <span class="badge">⚡ Equipamentos que trabalham por você</span>
+        <h1>Transforme um único investimento em uma <span class="grad-text">renda recorrente.</span></h1>
+        <p class="lead">Equipamentos premium para você locar em eventos. Com poucas locações o equipamento se paga e continua gerando lucro por anos.</p>
+        <div class="hero-actions">
+          <a href="#produtos" class="btn btn-gold btn-lg">Quero meu equipamento</a>
+          <a href="#calculadora" class="btn btn-ghost btn-lg">Calcular meu lucro</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong data-count="8">0</strong><span>eventos p/ se pagar*</span></div>
+          <div><strong data-count="5">0</strong><span>anos de lucro</span></div>
+          <div><strong data-count="100">0</strong><span>% acabamento premium</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <!-- INSERIR: Foto/render grande da pista de LED funcionando (substituir o bloco .led-floor abaixo) -->
+        <div class="led-floor" aria-label="Pista de LED">
+          <div class="led-grid"></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">Role para descobrir ↓</div>
+  </section>
+
+  <!-- ===================== PRODUTOS ===================== -->
+  <section class="section" id="produtos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Nossos equipamentos</span>
+        <h2>Escolha sua máquina de fazer dinheiro</h2>
+        <p class="section-sub">Acabamento premium, alta durabilidade e montagem simples. Prontos para lotar sua agenda de locações.</p>
+      </div>
+
+      <div class="products">
+        <!-- Pista Paris -->
+        <article class="product-card glass reveal">
+          <div class="product-media">
+            <!-- INSERIR: Fotos da Pista Paris aqui -->
+            <div class="product-img" data-label="Foto — Pista Paris"></div>
+          </div>
+          <div class="product-body">
+            <h3>Pista Paris</h3>
+            <div class="price">
+              <span class="price-old">R$ 13.990,00</span>
+              <span class="price-now">R$ 9.999,00</span>
+            </div>
+            <ul class="features">
+              <li>Ótimo acabamento premium</li>
+              <li>Vidro fumê de 8 mm</li>
+              <li>Estrutura 100% em alumínio</li>
+              <li>Leve: apenas 21 kg</li>
+              <li>Rampa de acesso de brinde</li>
+              <li>300 LEDs por módulo</li>
+              <li>Ideal para casamentos, 15 anos e eventos corporativos</li>
+            </ul>
+            <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Pista%20Paris%20da%20Moove%20Box." target="_blank" rel="noopener" class="btn btn-outline btn-block">Comprar Agora</a>
+          </div>
+        </article>
+
+        <!-- Pista Galáxia -->
+        <article class="product-card glass featured reveal">
+          <span class="ribbon">Premium</span>
+          <div class="product-media">
+            <!-- INSERIR: Fotos da Pista Galáxia aqui -->
+            <div class="product-img" data-label="Foto — Pista Galáxia"></div>
+          </div>
+          <div class="product-body">
+            <h3>Pista Galáxia</h3>
+            <div class="price">
+              <span class="price-old">R$ 15.990,00</span>
+              <span class="price-now">R$ 11.999,00</span>
+            </div>
+            <ul class="features">
+              <li>Ótimo acabamento premium</li>
+              <li>Vidro fumê de 8 mm</li>
+              <li>Estrutura 100% em alumínio</li>
+              <li>Leve: apenas 21 kg</li>
+              <li>Rampa de acesso de brinde</li>
+              <li>600 LEDs por módulo — muito mais brilho e efeitos</li>
+              <li>Equipamento premium</li>
+            </ul>
+            <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Pista%20Gal%C3%A1xia%20da%20Moove%20Box." target="_blank" rel="noopener" class="btn btn-gold btn-block">Comprar Agora</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUALIDADE ===================== -->
+  <section class="section section-alt" id="qualidade">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Acabamento premium</span>
+        <h2>Qualidade que se vê e se sente</h2>
+        <p class="section-sub">Todos os nossos equipamentos seguem o mesmo padrão premium de fabricação: feitos para impressionar nos eventos e durar por muitos anos de locação.</p>
+      </div>
+
+      <div class="cards-grid cols-3">
+        <div class="mini-card glass reveal"><span class="ic">✨</span><h4>Acabamento impecável</h4><p>Cada detalhe pensado para um visual de alto padrão.</p></div>
+        <div class="mini-card glass reveal"><span class="ic">🛠️</span><h4>Estrutura em alumínio</h4><p>Materiais robustos: resistência de sobra para uso intenso.</p></div>
+        <div class="mini-card glass reveal"><span class="ic">🪶</span><h4>Leves e práticos</h4><p>Fáceis de transportar, carregar e montar sozinho.</p></div>
+        <div class="mini-card glass reveal"><span class="ic">🎁</span><h4>Acessórios de brinde</h4><p>Itens inclusos sem custo extra para você já começar a faturar.</p></div>
+        <div class="mini-card glass reveal"><span class="ic">🔧</span><h4>Montagem simples</h4><p>Sistema prático que você instala em poucos minutos.</p></div>
+        <div class="mini-card glass reveal"><span class="ic">🛡️</span><h4>Alta durabilidade</h4><p>Equipamentos feitos para anos de eventos sem desgaste.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CALCULADORA DE LUCRO ===================== -->
+  <section class="section" id="calculadora">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Simule agora</span>
+        <h2>Calculadora de Lucro</h2>
+        <p class="section-sub">Veja em segundos quanto seu equipamento pode faturar.</p>
+      </div>
+
+      <div class="calc glass reveal">
+        <div class="calc-controls">
+          <div class="field">
+            <label for="aluguel">Valor do aluguel por evento</label>
+            <div class="input-money">
+              <span>R$</span>
+              <input type="number" id="aluguel" value="1200" min="0" step="50" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="eventos">Eventos por mês</label>
+            <div class="input-money">
+              <input type="number" id="eventos" value="8" min="0" step="1" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="meses">Período: <strong id="mesesLabel">12</strong> meses</label>
+            <input type="range" id="meses" value="12" min="1" max="60" step="1" class="slider" />
+          </div>
+
+          <div class="field">
+            <label>Escolha o equipamento</label>
+            <div class="pista-pick">
+              <label class="pick active">
+                <input type="radio" name="pista" value="9999" checked />
+                <span class="pick-title">Pista Paris</span>
+                <span class="pick-price">R$ 9.999</span>
+              </label>
+              <label class="pick">
+                <input type="radio" name="pista" value="11999" />
+                <span class="pick-title">Pista Galáxia</span>
+                <span class="pick-price">R$ 11.999</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-grid">
+            <div class="result-card">
+              <span class="result-label">Receita Mensal</span>
+              <span class="result-value" data-money id="rMensal">0</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">Receita Anual</span>
+              <span class="result-value" data-money id="rAnual">0</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">Receita Total no período</span>
+              <span class="result-value" data-money id="rTotal">0</span>
+            </div>
+            <div class="result-card highlight">
+              <span class="result-label">Recupera o investimento em</span>
+              <span class="result-value" id="rPayback">0</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">Lucro líquido no período</span>
+              <span class="result-value" data-money id="rLucro">0</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">Faturamento em 5 anos</span>
+              <span class="result-value" data-money id="r5anos">0</span>
+            </div>
+          </div>
+
+          <div class="calc-note">
+            ⭐ Em média nossos clientes recuperam o investimento entre <strong>8 e 12 eventos</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== POR QUE INVESTIR ===================== -->
+  <section class="section section-alt" id="porque">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Demanda o ano inteiro</span>
+        <h2>Por que investir em equipamentos para eventos</h2>
+        <p class="section-sub">Equipamentos com alta procura em praticamente todo tipo de evento, o ano inteiro.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="mini-card glass reveal"><span class="ic">💍</span><h4>Casamentos</h4></div>
+        <div class="mini-card glass reveal"><span class="ic">👑</span><h4>15 anos</h4></div>
+        <div class="mini-card glass reveal"><span class="ic">🎓</span><h4>Formaturas</h4></div>
+        <div class="mini-card glass reveal"><span class="ic">🏢</span><h4>Corporativos</h4></div>
+        <div class="mini-card glass reveal"><span class="ic">🎂</span><h4>Aniversários</h4></div>
+        <div class="mini-card glass reveal"><span class="ic">🎪</span><h4>Feiras</h4></div>
+        <div class="mini-card glass reveal"><span class="ic">🎤</span><h4>Shows</h4></div>
+        <div class="mini-card glass reveal"><span class="ic">🎉</span><h4>Festas particulares</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SIMULAÇÃO / TIMELINE ===================== -->
+  <section class="section" id="simulacao">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Sua jornada</span>
+        <h2>Do investimento à expansão</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-step glass reveal"><span class="tl-num">1</span><h4>Compra da pista</h4><p>Você recebe um equipamento premium pronto para faturar.</p></div>
+        <div class="tl-step glass reveal"><span class="tl-num">2</span><h4>Primeiros eventos</h4><p>As primeiras locações já cobrem boa parte do investimento.</p></div>
+        <div class="tl-step glass reveal"><span class="tl-num">3</span><h4>Investimento recuperado</h4><p>Em poucos eventos a pista se paga por completo.</p></div>
+        <div class="tl-step glass reveal"><span class="tl-num">4</span><h4>Lucro</h4><p>Tudo a partir daqui é lucro líquido no seu bolso.</p></div>
+        <div class="tl-step glass reveal"><span class="tl-num">5</span><h4>Expansão do negócio</h4><p>Compre mais pistas e multiplique sua renda.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERIA ===================== -->
+  <section class="section section-alt" id="galeria">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Veja de perto</span>
+        <h2>Galeria</h2>
+        <p class="section-sub">Substituir pelas fotos reais do equipamento.</p>
+      </div>
+
+      <div class="carousel reveal">
+        <button class="car-btn prev" id="carPrev" aria-label="Anterior">‹</button>
+        <div class="car-viewport">
+          <div class="car-track" id="carTrack">
+            <!-- INSERIR: Fotos reais do equipamento aqui (cada slide abaixo é um espaço reservado) -->
+            <div class="car-slide" data-label="Foto 1 — Substituir"></div>
+            <div class="car-slide" data-label="Foto 2 — Substituir"></div>
+            <div class="car-slide" data-label="Foto 3 — Substituir"></div>
+            <div class="car-slide" data-label="Foto 4 — Substituir"></div>
+          </div>
+        </div>
+        <button class="car-btn next" id="carNext" aria-label="Próximo">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VÍDEOS ===================== -->
+  <section class="section" id="videos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Em movimento</span>
+        <h2>Vídeos</h2>
+      </div>
+      <div class="video-grid">
+        <!-- INSERIR: Vídeos aqui (trocar o bloco por <iframe ...> do YouTube/Vimeo) -->
+        <div class="video-embed glass reveal" data-label="▶ Inserir vídeo 1"></div>
+        <div class="video-embed glass reveal" data-label="▶ Inserir vídeo 2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEPOIMENTOS ===================== -->
+  <section class="section section-alt" id="depoimentos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Quem já investiu</span>
+        <h2>Depoimentos</h2>
+      </div>
+      <div class="cards-grid cols-3">
+        <!-- INSERIR: Depoimentos reais aqui (nome, foto e texto) -->
+        <figure class="testimonial glass reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Substituir por depoimento real do cliente."</blockquote>
+          <figcaption><span class="avatar"></span> Nome do cliente</figcaption>
+        </figure>
+        <figure class="testimonial glass reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Substituir por depoimento real do cliente."</blockquote>
+          <figcaption><span class="avatar"></span> Nome do cliente</figcaption>
+        </figure>
+        <figure class="testimonial glass reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Substituir por depoimento real do cliente."</blockquote>
+          <figcaption><span class="avatar"></span> Nome do cliente</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section" id="faq">
+    <div class="container narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow">Tire suas dúvidas</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+
+      <div class="faq reveal">
+        <details class="faq-item"><summary>Quanto tempo dura?</summary><p>Com estrutura 100% em alumínio e pintura eletrostática, a pista é feita para durar muitos anos de uso intenso.</p></details>
+        <details class="faq-item"><summary>Qual garantia?</summary><p>Oferecemos garantia estrutural e elétrica, além de suporte técnico especializado.</p></details>
+        <details class="faq-item"><summary>É fácil montar?</summary><p>Sim. Os módulos se encaixam de forma simples e acompanham rampa de acesso.</p></details>
+        <details class="faq-item"><summary>Quanto consigo cobrar?</summary><p>O valor varia por região, mas é comum cobrar a partir de R$ 1.200 por evento.</p></details>
+        <details class="faq-item"><summary>Quantos eventos preciso para pagar a pista?</summary><p>Em média, nossos clientes recuperam o investimento entre 8 e 12 eventos.</p></details>
+        <details class="faq-item"><summary>Como funciona a assistência?</summary><p>Atendimento especializado e suporte técnico sempre que você precisar.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GARANTIA ===================== -->
+  <section class="section section-alt" id="garantia">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Compre com segurança</span>
+        <h2>Sua tranquilidade garantida</h2>
+      </div>
+      <div class="cards-grid cols-4">
+        <div class="guarantee glass reveal"><span class="ic">🛡️</span><h4>Garantia estrutural</h4></div>
+        <div class="guarantee glass reveal"><span class="ic">⚡</span><h4>Garantia elétrica</h4></div>
+        <div class="guarantee glass reveal"><span class="ic">🔧</span><h4>Suporte técnico</h4></div>
+        <div class="guarantee glass reveal"><span class="ic">🎧</span><h4>Atendimento especializado</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHAMADA FINAL ===================== -->
+  <section class="cta-final">
+    <div class="cta-glow"></div>
+    <div class="container reveal">
+      <h2>Comece hoje seu negócio de locação de Pistas de LED.</h2>
+      <p>Enquanto muitos trabalham por horas, seu equipamento trabalha por você.</p>
+      <a href="#produtos" class="btn btn-gold btn-lg">Quero comprar minha pista</a>
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <!-- LOGO: PNG com fundo transparente -->
+        <a href="#topo" class="logo logo-footer"><img src="logo.png" alt="Moove Box" class="logo-img" /></a>
+        <p class="footer-tag">Pistas de LED premium para eventos inesquecíveis.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/5531971726359" target="_blank" rel="noopener">WhatsApp: (31) 97172-6359</a></li>
+        <li><a href="https://instagram.com/moovebox360" target="_blank" rel="noopener">Instagram: @moovebox360</a></li>
+        <li><a href="tel:+5531971726359">Telefone: (31) 97172-6359</a></li>
+        <li>Santa Luzia — MG</li>
+      </ul>
+    </div>
+    <div class="footer-bottom">© 2026 Moove Box. Todos os direitos reservados.</div>
+  </footer>
+
+  <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20as%20pistas%20de%20LED%20da%20Moove%20Box." class="whats-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
